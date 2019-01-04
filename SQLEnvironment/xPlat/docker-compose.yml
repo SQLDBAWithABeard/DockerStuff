@@ -1,0 +1,43 @@
+version: '2.4'
+
+services:
+    sql2019:
+        image: mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+        platform: linux
+        ports:  
+          - "15585:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    sql2012:
+        image: dbafromthecold/sqlserver2012dev:sp4
+        platform: windows
+        ports:  
+          - "15589:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    sql2014:
+        image: dbafromthecold/sqlserver2014dev:sp2
+        platform: windows
+        ports:  
+          - "15588:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    sql2016:
+        image: dbafromthecold/sqlserver2016dev:sp2
+        platform: windows
+        ports:  
+          - "15587:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    sql2017:
+        image: microsoft/mssql-server-windows-developer:2017-latest
+        platform: windows
+        ports:  
+          - "15586:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
