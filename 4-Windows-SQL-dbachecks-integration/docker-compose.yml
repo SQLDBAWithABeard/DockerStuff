@@ -8,8 +8,6 @@ services:
         environment:
           SA_PASSWORD: "Password0!"
           ACCEPT_EULA: "Y"
-        volumes: 
-          - C:\MSSQL\BACKUP\KEEP:C:\SQLBackups
     sql2014:
         image: dbafromthecold/sqlserver2014dev:sp2
         ports:  
@@ -17,8 +15,6 @@ services:
         environment:
           SA_PASSWORD: "Password0!"
           ACCEPT_EULA: "Y"
-        volumes: 
-          - C:\MSSQL\BACKUP\KEEP:C:\SQLBackups
     sql2016:
         image: dbafromthecold/sqlserver2016dev:sp2
         ports:  
@@ -26,8 +22,6 @@ services:
         environment:
           SA_PASSWORD: "Password0!"
           ACCEPT_EULA: "Y"
-        volumes: 
-          - C:\MSSQL\BACKUP\KEEP:C:\SQLBackups
     sql2017:
         image: microsoft/mssql-server-windows-developer:2017-latest
         ports:  
@@ -35,5 +29,3 @@ services:
         environment:
           SA_PASSWORD: "Password0!"
           ACCEPT_EULA: "Y"
-        volumes: 
-          - C:\MSSQL\BACKUP\KEEP:C:\SQLBackups

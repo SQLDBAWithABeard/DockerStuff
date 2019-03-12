@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+    sql2012:
+        image: dbafromthecold/sqlserver2012dev:sp4
+        ports:  
+          - "15589:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+        volumes: 
+          - D:\SQLBackups:C:\SQLBackups
+    sql2014:
+        image: dbafromthecold/sqlserver2014dev:sp2
+        ports:  
+          - "15588:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+        volumes: 
+          - D:\SQLBackups:C:\SQLBackups
