@@ -1,13 +1,23 @@
 cd dockercompose:\dbatools-2-instances-AG
 
+# I map C:\MSSQL\BACKUP\KEEP on my local machine (where my backups are) to /var/opt/mssql/backups 
+# on the containers on lines 10 and 17 of the docker-compose - Change as required
+
 docker-compose up -d 
+
+# Create the credential with Get-Credential | Export-CliXml -Path sacred.xml
+# U: sqladmin P: dbatools.IO
 
 $cred = Import-Clixml -Path sacred.xml
 $sqlinstance1 = 'localhost,15591'
 $sqlinstance2 = 'localhost,15592'
 $AGName = "dbatools-ag"
 
-Get-DbaDatabase -SqlInstance $sqlinstance1 -SqlCredential $cred |ft 
+# use default parameters to save remembering to use the SqlCredential Param!
+
+$PSDefaultParameterValues += @{ '*:SqlCredential' = $cred }
+
+Get-DbaDatabase -SqlInstance $sqlinstance1  |ft 
 
 $path = '/var/opt/mssql/backups/'
 
