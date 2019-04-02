@@ -1,0 +1,84 @@
+version: '3.7'
+
+services:
+    Beard1:
+      image: microsoft/mssql-server-windows-developer:2017-latest
+      ports:  
+        - "15581:1433"
+      environment:
+        SA_PASSWORD: "Password0!"
+        ACCEPT_EULA: "Y"
+    Beard2:
+        image: microsoft/mssql-server-windows-developer:2017-latest
+        ports:  
+          - "15582:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    Beard3:
+        image: microsoft/mssql-server-windows-developer:2017-latest
+        ports:  
+          - "15583:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    Beard4:
+        image: microsoft/mssql-server-windows-developer:2017-latest
+        ports:  
+          - "15584:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    Beard5:
+        image: microsoft/mssql-server-windows-developer:2017-latest
+        ports:  
+          - "15585:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    Beard6:
+        image: microsoft/mssql-server-windows-developer:2017-latest
+        ports:  
+          - "15586:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    Beard7:
+        image: microsoft/mssql-server-windows-developer:2017-latest
+        ports:  
+          - "15587:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    Beard8:
+        image: microsoft/mssql-server-windows-developer:2017-latest
+        ports:  
+          - "15588:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    Beard9:
+        image: microsoft/mssql-server-windows-developer:2017-latest
+        ports:  
+          - "15589:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    Beard10:
+        image: microsoft/mssql-server-windows-developer:2017-latest
+        ports:  
+          - "15590:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+    Beard11:
+        image: microsoft/mssql-server-windows-developer:2017-latest
+        ports:  
+          - "15591:1433"
+        environment:
+          SA_PASSWORD: "Password0!"
+          ACCEPT_EULA: "Y"
+networks:
+  default:
+    external:
+      name: nat
