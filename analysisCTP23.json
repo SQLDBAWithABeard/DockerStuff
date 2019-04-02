@@ -1,0 +1,35 @@
+{
+    "Controller": {
+        "Listener": {
+            // I'm using Extended Events here, but it could
+            // be any type of listener
+            "__type": "FileWorkloadListener",
+            "Source":"C:\\temp\\AW2014Workload.sqlite"
+        },
+        "Consumers": [
+            {
+                // This is the type of the consumer
+                // Four types are available at the moment:
+                // - ReplayConsumer
+                // - AnalysisConsumer
+                // - WorkloadFileWriterConsumer
+                "__type": "AnalysisConsumer",
+
+                // The same considerations for ConnectionInfo
+                // valid for the Listener apply here as well
+                // See the documentation of the individual
+                // Consumer type for the list of the supported properties
+                "ConnectionInfo":
+                {
+                    "ServerName": "ROB-XPS",
+                    "DatabaseName": "workload",
+                    "SchemaName": "CTP23"
+                },
+
+                // This decides how often the metrics are aggregated and 
+                // written to the target database
+                "UploadIntervalSeconds": 10
+            }
+        ]
+    }
+}

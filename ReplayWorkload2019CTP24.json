@@ -1,0 +1,20 @@
+{
+    "Controller": {
+        "Listener": {
+            // I'm using Extended Events here, but it could
+            // be any type of listener
+            "__type": "FileWorkloadListener",
+            "Source":"C:\\temp\\AW2014Workload.sqlite"
+        },
+        "Consumers": [
+            {
+                "__type": "ReplayConsumer",
+                "ConnectionInfo": {
+                    "ServerName": "localhost,15594",
+                    "UserName": "sa",
+                    "Password": "Password0!"
+                }
+            }
+        ]
+    }
+}

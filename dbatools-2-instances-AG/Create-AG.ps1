@@ -61,3 +61,6 @@ $params = @{
  Get-DbaAvailabilityGroup -SqlInstance $sqlinstance1 -SqlCredential $cred
  Get-DbaAgDatabase -SqlInstance $sqlinstance1 -SqlCredential $cred -AvailabilityGroup $AGName
  Get-DbaAgReplica -SqlInstance $sqlinstance1 -SqlCredential $cred
+
+
+docker-compose down
